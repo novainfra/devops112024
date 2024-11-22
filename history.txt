@@ -1,0 +1,301 @@
+    1  mkdir -pv /var/repositorio1
+    2  mkdir -pv /var/repositorio2
+    3  cd /var/repositorio1/
+    4  git help init
+    5  git init
+    6  git config --global init.defaultBranch main
+    7  git branch
+    8  git config --global init.defaultBranch main
+    9  vim teste
+   10  mv teste /root/.gitconfig
+   11  git config --global --list
+   12  git st
+   13  ls -la
+   14  cd .git/
+   15  ls -l
+   16  ls -l branches/
+   17  git config --local user.name "Israel Viana"
+   18  git config --local user.email "israel@novainfra.com.br"
+   19  vi config
+   20  git config --local --list
+   21  ls -l
+   22  ls hooks/
+   23  cd ..
+   24  ls -l
+   25  git status
+   26  git st
+   27  cp /vagrant/Vagrantfile .
+   28  ls -l
+   29  cat Vagrantfile 
+   30  git add Vagrantfile 
+   31  git st
+   32  git rm --cached Vagrantfile 
+   33  git st
+   34  git add Vagrantfile 
+   35  git st
+   36  git commit  
+   37   git status
+   38  ls
+   39  git log
+   40  git log -n 5
+   41  git log -v
+   42  git log --oneline
+   43  mkdir --help
+   44  mkdir  -pv /var/clonerepolocal
+   45  cd /var/clonerepolocal/
+   46  ls -la
+   47  git clone https://github.com/htop-dev/htop.git
+   48  ls -lha
+   49  cd htop/
+   50  ls
+   51  ls -lah rt
+   52  ls -lahrt
+   53  git config --local --list
+   54  git status
+   55  cd ..
+   56  rm -Rf htop/
+   57  git clone /var/repositorio1/ .
+   58  ls -l
+   59  ls -lhart
+   60  git config --local --list
+   61  cd /var/repositorio1/ 
+   62  ls -l
+   63  cp /vagrant/script.sh 
+   64  cp /vagrant/script.sh .
+   65  cp /vagrant/playbook.yml .
+   66  git status
+   67  git add .
+   68  vi .git/hooks/pre-comit
+   69  mv .git/hooks/pre-comit .git/hooks/pre-commit
+   70  vi .git/hooks/commit-msg
+   71  MESSAGE=$(cat "$1") 
+   72  if ! echo "$MESSAGE" | grep -qE "^(fix|test):"; then  echo "A mensagem do commit deve começar com fix ou test" ; exit 1 
+   73  vi .git/hooks/commit-msg
+   74  vim .git/hooks/commit-msg
+   75  chmod a+x .git/hooks/commit-msg
+   76  vim .git/hooks/commit-msg
+   77  git commit -m "Segundo commit adicionando novos arquivos"
+   78  chmod a+x .git/hooks/pre-commit
+   79  git commit -m "Segundo commit adicionando novos arquivos"
+   80  git log
+   81  rm .git/hooks/pre-commit
+   82  rm .git/hooks/commit-msg
+   83  ls -l
+   84  git log --oneline
+   85  git log -p
+   86  git log -n1
+   87  git log -n 1
+   88  git log --author="
+   89  Israsel
+   90  git log --author="
+   91  Israel"
+   92  git log --pretty="format:H"
+   93  git log --pretty="format:%H"
+   94  git log --pretty="format:%H %c"
+   95  git log --pretty="format:%H %cn"
+   96  git log --pretty="format:%H %cn %ce"
+   97  git log --pretty="format:%H %cn %ce %cD"
+   98  git log --graph --onlin e
+   99  git log --graph --online
+  100  git log --graph --all --online
+  101  git config --global alias.lg "log --online"
+  102  git lg
+  103  git config --global alias.lg "log --oneline"
+  104  git lg
+  105  ls -la
+  106  cp /etc/shadow .
+  107  vi .gitignore
+  108  git status
+  109  git add .gitignore 
+  110  git commit -m "Adicionando arquivo .gitignore Israel"
+  111  git lg
+  112  cd /var/repositorio1
+  113  ls -l
+  114  mkdir -pv /var/repositoriobare
+  115  cd /var/repositoriobare
+  116  git init --bare
+  117  ls -lhar
+  118  ls -lhart
+  119  ls -lhar
+  120  ls -la
+  121  git status
+  122  cd ../repositorio1
+  123  git remote add controle-local /var/repositoriobare/
+  124  git remote -v
+  125  git remote -v
+  126  git push local main
+  127  git push controle-local main
+  128  git push controle-local main
+  129  git remote add local /var/repositoriobare/
+  130  git remote -v
+  131  git push local main
+  132  cd
+  133  vi .gitconfig 
+  134  cd /var/repositorio1/
+  135  ls -l
+  136  git br
+  137  git branch -m master main
+  138  git branch 
+  139  git push local main
+  140  ls -la
+  141  git push controle-local main
+  142  ss -help
+  143  ss -a
+  144  ss -help
+  145  ss -al
+  146  ss -help
+  147  ss -alt
+  148  ss -altn
+  149  cd ../repositorio2
+  150  ls
+  151  ls -la
+  152  git init
+  153  ls -la
+  154  git remote -v
+  155  git remote add controle-local /var/repositoriobare
+  156  git remote -v
+  157  git config  --local user.name Fabiana
+  158  git config  --local user.email fabianascv@gmail.com
+  159  ls -la
+  160  git pull controle-local main
+  161  git branch
+  162  ls -la
+  163  git config pull.rebase false
+  164  git config --global pull.rebase false
+  165  git pull controle-local main
+  166  mkdir -pv /var/repositorio3
+  167  cd /var/repositorio3
+  168  git init
+  169  git config --local user.name "Kalyne"
+  170  git config --local user.email "kalyne@gmail.com"
+  171  git branch -M main
+  172  git branch 
+  173  git remote add controle-local /var/repositoriobare/
+  174  git remote add origin https://github.com/novainfra/curso-devops.git
+  175  git remote -v
+  176  git remote -v
+  177  git pull controle-local main
+  178  ls -lh art
+  179  ls -lh 
+  180  ls -lha
+  181  git push origin main 
+  182  cd /tmp
+  183  wget https://github.com/git-ecosystem/git-credential-manager/releases/download/v2.6.0/gcm-linux_amd64.2.6.0.deb
+  184  dpkg -i gcm-linux_amd64.2.6.0.deb 
+  185  git config --global credential.crendentialStore gpg
+  186  export GCM_CREDENTIAL_STORE=gpg
+  187  apt install pass -y
+  188  gpg --gen key
+  189  gpg --gen-key
+  190  gpg --list-key
+  191  gpg --list-keys
+  192  gpg --list-keys
+  193  pass init israelviana
+  194  export GPG_TTY=$(tty)
+  195  who
+  196  vi /etc/profile
+  197  echo "export GPG_TTY=$(tty)" >> /etc/profile
+  198  tail -n 1 /etc/profile
+  199  git-credential-manager configure
+  200  cd /var/repositorio3
+  201  git push origin main
+  202  git push origin main
+  203  vagrant halt
+  204  shutdown -h now
+  205  cd /vagrant/
+  206  dir
+  207  cd /var/repositorio3
+  208  git branch
+  209  git branch config1
+  210  git branch
+  211  git checkout config1
+  212  git -b checkout config2
+  213  git checkout -b config2
+  214  git checkout -c config3
+  215  git switch -c config3
+  216  git branch
+  217  git branch -d config2
+  218  git branch -d config3
+  219  git branch -d config2
+  220  git branch -d config3
+  221  git branch
+  222  git branch -d config3
+  223  git log
+  224  cd /etc/hosts .
+  225  cp /etc/hosts .
+  226  git status
+  227  git add hosts
+  228  git commit -m "Adicionado Israel arquivo hosts"
+  229  git log --online
+  230  git log --oneline
+  231  git chekout config1
+  232  git checkout config1
+  233  git commit -m "Adicionado Israel arquivo hosts"
+  234  git checkout main
+  235  git checkout main
+  236  git log --oneline
+  237  cd ../repositorio2
+  238  git log --oneline
+  239  git pull local main
+  240  git pull local main
+  241  git checkout -b config2
+  242  git branch
+  243  cp /etc/hosts .
+  244  ls
+  245  vi hosts 
+  246  git status
+  247  git add hosts
+  248  git commit -m "Adicionando Israel hosts no repo2"
+  249  git branch
+  250  git branch
+  251  git checkout main
+  252  git branch
+  253  git log --oneline
+  254  git merge config2
+  255  git status
+  256  ls
+  257  git log --oneline
+  258  git push local main
+  259  git push controle-local main
+  260  history 
+  261  cd ../repositorio3
+  262  git branch
+  263  git branch -d config3
+  264  git branch -D config3
+  265  git push controle-local main
+  266  git pull controle-local main
+  267  cat hosts
+  268  git status
+  269  git log --oneline
+  270  git merge config2
+  271  git merge config1
+  272  git push controle-local main
+  273  git push controle-local main
+  274  cd /var/repositorio2/
+  275  cd -
+  276  git pull controle-local main
+  277  cd -
+  278  git pull controle-local main
+  279  cat hosts 
+  280  git merge config2
+  281  cd -
+  282  git push origin main
+  283  git push origin main
+  284  vagrant ssh controle
+  285  ls -la
+  286  git remote -v
+  287  git push origin main
+  288  git push origin main
+  289  git push origin main
+  290  git push origin main
+  291  git config --global
+  292  git push origin main
+  293  history 
+  294  git config --global credential.crendentialStore gpg
+  295  export GCM_CREDENTIAL_STORE=gpg
+  296  export GPG_TTY=$(tty)
+  297  echo "export GPG_TTY=$(tty)" >> /etc/profile
+  298  git push origin main
+  299  git push origin main
+  300  git branch
+  301  history > /vagrant/history.txt
